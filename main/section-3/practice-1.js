@@ -1,5 +1,4 @@
 'use strict';
 
-module.exports = function createUpdatedCollection(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
-}
+module.exports = (collectionA, objectB) => collectionA
+  .map(x => objectB.value.includes(x.key) ? ({key:x.key,count:x.count-1}) : x)
